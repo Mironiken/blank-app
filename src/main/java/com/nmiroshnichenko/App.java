@@ -1,13 +1,22 @@
 package com.nmiroshnichenko;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+@Component
+public class App implements Runnable {
+
+    @Autowired
+    private AppConfiguration config = null;
+
+    @Override
+    public void run() {
+        System.out.println("File property source: " + config.getFile());
+        System.out.println("Console property source: " + config.getConsole());
+        System.out.println("Default property source: " + config.getDef());
     }
 }
