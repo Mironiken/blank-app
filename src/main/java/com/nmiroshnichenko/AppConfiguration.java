@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * Created on 06.02.2018.
  */
 @Component
-@PropertySource(value = "file:src/resources/application.properties")
+@PropertySource(value = "file:${config:application.properties}")
 class AppConfiguration {
     String getDef() {
         return def;
