@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SpringApp {
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(SpringApp.class.getName());
     public static void main(String[] args) {
 
         logger.info("Application started");

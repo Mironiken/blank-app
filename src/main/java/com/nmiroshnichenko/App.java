@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class App implements Runnable {
 
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(App.class.getName());
 
     @Autowired
     private AppConfiguration config = null;
